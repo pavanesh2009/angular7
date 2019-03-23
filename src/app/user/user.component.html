@@ -1,0 +1,22 @@
+<div *ngIf="userViewEnabled">
+  <input [(ngModel)]="searchText" type="text" name="search" placeholder="Search.."
+         class="form-control" style="margin-left: 28em;">
+  <table id="users">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Phone</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let user of users | filter : searchText">
+    <tr>
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.phoneNumber}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

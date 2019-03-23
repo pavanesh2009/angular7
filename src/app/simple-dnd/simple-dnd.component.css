@@ -1,0 +1,122 @@
+:host {
+  display: block;
+  margin-top: 1em;
+}
+
+#builder {
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  padding: 0;
+}
+
+#screen-container-group {
+  position: relative;
+  display: flex;
+}
+
+#edit-campaign-container-group {
+  position: relative;
+  display: flex;
+  height: 100%;
+}
+
+.marker {
+  position: absolute;
+  top: 15%;
+  left: 3px;
+}
+
+.marker-label {
+
+  background-color: black;
+  color: white;
+  padding: 2px 3px;
+  font-weight: bold;
+}
+
+.marker-border {
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  width: 16em;
+  height: 4em;
+}
+
+.screen-container {
+  height: 46vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75em;
+  border-right: 1px solid lightgray;
+  background-color: #00a8b0;
+}
+
+.selected-screen-container {
+  background-color: lightblue !important;
+}
+
+.screen-container:hover {
+  background-color: lightblue;
+}
+
+.screen-card {
+  height: 55%;
+  width: 11em;
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+  background-color: white;
+}
+
+.screen-card-title {
+  height: 8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #dfdfe0;
+}
+
+.edit-campaign-card-title {
+  background-color: fuchsia;
+}
+
+.screen-card-icon svg {
+  height: 3.5em;
+  width: 3.5em;
+  fill: white;
+}
+
+.screen-properties {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.spec-config {
+  min-height: 4em;
+  padding-top: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-edit-screen-properties {
+  width: 13em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-color: #10000b;
+  color: #10000b;
+}
+
+.btn-edit-screen-properties svg {
+  height: 1.5em;
+  width: 1.5em;
+  fill: darkblue;
+  margin-right: 0.5em;
+}
+
+

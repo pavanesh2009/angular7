@@ -1,0 +1,27 @@
+<div class="container">
+  <div id="builder" class="col-12">
+    <div *ngFor="let targetObject of campaign.propertyConfigs; let i = index">
+      <div id="screen-container-group">
+        <div class="marker">
+          <span class="marker-label">{{ targetObject.label }}</span>
+          <div class="marker-border"></div>
+        </div>
+        <div dnd-sortable-container [sortableData]="targetObjectArray[i]" [dropZones]="['zone' + (i + 1)]" style="display: flex;">
+          <ng-container *ngFor="let propertyConfig of targetObjectArray[i]; let x = index">
+            <div class="screen-container"
+                 (click)="selectScreen(propertyConfig.id)"
+                 dnd-sortable [sortableIndex]="x" [dragEnabled]="propertyConfig.type === 'screen'"
+                 (onDropSuccess)="updateMetaDataOrder(targetObjectArray[i], x)"
+                 [class.selected-screen-container]="propertyConfig.id === selectedScreenId">
+              <div class="screen-card">
+                <div class="screen-card-title">
+                  <span class="screen-title-text">{{propertyConfig.label | uppercase}}</span>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

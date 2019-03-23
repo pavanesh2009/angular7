@@ -1,0 +1,5 @@
+ul li > h3 {
+  display: inline;
+  margin-right: .5em;
+}
+
